@@ -64,10 +64,11 @@ add_library(${PROJECT_NAME}
   src/parsers/range.cpp
   src/parsers/time.cpp
   src/parsers/trackstat.cpp
-
   src/parsers/dualantennaheading.cpp
   src/conv_llh_to_xyz.cpp
 )
+
+add_dependencies(${PROJECT_NAME} novatel_gps_msgs_generate_messages_cpp)
 
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
